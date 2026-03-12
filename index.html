@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleFPS - More FPS & Lower Input Lag</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0f1f 0%, #0b162f 35%, #000d1f 70%, #0a1a35 100%);
+      font-family: system-ui, -apple-system, sans-serif;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .hero-bg {
+      background: 
+        radial-gradient(circle at 25% 75%, rgba(34, 211, 238, 0.07) 0%, transparent 65%),
+        linear-gradient(to bottom, rgba(8, 20, 45, 0.94), rgba(0, 10, 30, 0.96));
+      background-color: #050d1e; /* bardzo ciemny fallback */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #22d3ee, #14b8a6);
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(34, 211, 238, 0.3);
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #14b8a6, #22d3ee);
+      transform: translateY(-4px) scale(1.06);
+      box-shadow: 0 20px 40px rgba(34, 211, 238, 0.5);
+    }
+
+    .feature-card {
+      transition: all 0.4s ease;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(34, 211, 238, 0.1);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-14px) scale(1.05);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    section {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.4);
+      border-bottom: 1px solid rgba(34, 211, 238, 0.15);
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 w-full backdrop-blur-xl z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-5 px-8">
+      <div class="text-4xl font-black tracking-tighter">Simple<span class="text-cyan-300">FPS</span></div>
+      <nav class="flex gap-10 text-lg font-medium">
+        <a href="#servis" class="hover:text-cyan-200 transition">PRO SERWIS</a>
+        <a href="#zakup" class="hover:text-cyan-200 transition">ZAPISZ SIĘ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-bg h-screen flex items-center justify-center text-center">
+    <div class="max-w-5xl mx-auto px-6 pt-20">
+      <h1 class="text-6xl md:text-7xl font-black leading-none mb-6">SimpleFPS - More FPS & Lower Input Lag on your PC!</h1>
+      <p class="text-3xl font-medium mb-10">Odkryj prawdziwą moc swojego komputera</p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="https://discord.gg/simplefps" target="_blank" rel="noopener noreferrer" class="btn text-2xl font-bold px-14 py-6 rounded-3xl inline-block">ZAPISZ SIĘ</a>
+        <a href="https://discord.gg/simplefps" target="_blank" rel="noopener noreferrer" class="btn text-2xl font-bold px-14 py-6 rounded-3xl inline-block bg-white/10 hover:bg-white/20">SPRÓBUJ TERAZ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WYKOZYSTAJ POTENCJAŁ -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold mb-8 animate-in">Wykorzystaj potencjał</h2>
+      <p class="text-xl leading-relaxed">Najnowsza usługa optymalizacji komputera, która w krótkim czasie poprawi osiągi Twojego sprzętu i da Ci przewagę w każdej grze.</p>
+    </div>
+  </section>
+
+  <!-- PRO SERWIS 1.8 -->
+  <section id="servis" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-4">Niezwykle skuteczny</h2>
+      <h3 class="text-6xl font-black text-center mb-16 text-cyan-300">PRO SERWIS 1.8</h3>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="feature-card p-10 rounded-3xl text-center">
+          <i class="fa-solid fa-chart-line text-6xl text-cyan-300 mb-6"></i>
+          <h4 class="text-3xl font-bold mb-4">FPS</h4>
+          <p class="text-lg">Zwiększamy maksymalne wartości FPS i normalizujemy wyświetlane klatki, gwarantując płynność i stabilność.</p>
+        </div>
+        <div class="feature-card p-10 rounded-3xl text-center">
+          <i class="fa-solid fa-mouse text-6xl text-cyan-300 mb-6"></i>
+          <h4 class="text-3xl font-bold mb-4">INPUT LAG</h4>
+          <p class="text-lg">Minimalizujemy opóźnienia sprzętowe, co pozytywnie wpływa na responsywność myszy i klawiatury.</p>
+        </div>
+        <div class="feature-card p-10 rounded-3xl text-center">
+          <i class="fa-solid fa-ban text-6xl text-cyan-300 mb-6"></i>
+          <h4 class="text-3xl font-bold mb-4">STUTTERING</h4>
+          <p class="text-lg">Eliminujemy przycinanie obrazu spowodowane nieregularną pracą systemu i podzespołów.</p>
+        </div>
+        <div class="feature-card p-10 rounded-3xl text-center">
+          <i class="fa-solid fa-signal text-6xl text-cyan-300 mb-6"></i>
+          <h4 class="text-3xl font-bold mb-4">PING</h4>
+          <p class="text-lg">Redukujemy ping poprzez zaawansowaną konfigurację karty sieciowej i ustawień systemowych.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section id="zakup" class="py-28 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-5xl font-black mb-8">Gotowy na prawdziwy boost?</h2>
+      <p class="text-2xl mb-10">Dołącz do SimpleFPS i wyciskaj maksimum z każdego FPS-a.</p>
+      <a href="https://discord.gg/simplefps" target="_blank" rel="noopener noreferrer" class="btn text-3xl font-bold px-20 py-8 rounded-3xl inline-block">ZAPISZ SIĘ TERAZ</a>
+    </div>
+  </section>
+
+  <!-- STOPKA -->
+  <footer class="py-12 text-center bg-black/50 text-sm border-t border-cyan-900/40">
+    <p>© SimpleFPS • Wszystkie prawa zastrzeżone • 2026</p>
+  </footer>
+
+</body>
+</html>
